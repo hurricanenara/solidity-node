@@ -1,18 +1,23 @@
-// pragma solidity ^0.4.17;
-// linter warnings (red underline) about pragma version can igonored!
-
-// contract code will go here
-
-pragma solidity >=0.4.16 <0.8.0;
+pragma solidity ^0.4.17;
 
 contract Inbox {
+    // when storage variable is marked with public, it will set a attr_getter
     string public message;
 
-    constructor(string memory initialMessage) {
+    // constructor function since smae name as contract
+    // constructor(Inbox, string initialMessage) public {
+    //     message = initialMessage;
+    // }
+
+    function Inbox(string initialMessage) public {
         message = initialMessage;
     }
 
-    function setMessage(string memory newMessage) public {
+    function setMessage(string newMessage) public {
         message = newMessage;
     }
+
+    //     function getMessage() public view returns (string) {
+    //         return message;
+    //     }
 }
